@@ -1,8 +1,30 @@
+import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 export default function NavBar() {
+  const NavMenu = (
+    <>
+      <li>
+        <Link href={"/dtf-custom-trasfer"}>DTF Custom Transfer</Link>
+      </li>
+      <li>
+        <Link href={"/uv-dtf"}>UV DTF</Link>
+      </li>
+      <li>
+        <Link href={"/blanks"}>Blanks</Link>
+      </li>
+      <li>
+        <Link href={"/faq"}>FAQ</Link>
+      </li>
+      <li>
+        <Link href={"/contact-us"}>Contact Us</Link>
+      </li>
+    </>
+  );
+
   return (
-    <div className="navbar bg-base-100 shadow-sm">
+    <div className="navbar bg-[#19191C] text-white font-extrabold shadow-sm max-w-7xl mx-auto px-10">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -24,54 +46,20 @@ export default function NavBar() {
           </div>
           <ul
             tabIndex="-1"
-            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
+            className="menu menu-sm dropdown-content bg-[#19191C] rounded-box z-1 mt-3 w-52 p-2 shadow"
           >
-            <li>
-              <a>Item 1</a>
-            </li>
-            <li>
-              <a>Parent</a>
-              <ul className="p-2">
-                <li>
-                  <a>Submenu 1</a>
-                </li>
-                <li>
-                  <a>Submenu 2</a>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <a>Item 3</a>
-            </li>
+            {NavMenu}
           </ul>
         </div>
-        <a className="btn btn-ghost text-xl">Prime DTF</a>
+        <Link href={"/"}>
+          <Image src={"/assets/logo.png"} width={100} height={80} alt="logo" />
+        </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1">
-          <li>
-            <a>Item 1</a>
-          </li>
-          <li>
-            <details>
-              <summary>Parent</summary>
-              <ul className="p-2">
-                <li>
-                  <a>Submenu 1</a>
-                </li>
-                <li>
-                  <a>Submenu 2</a>
-                </li>
-              </ul>
-            </details>
-          </li>
-          <li>
-            <a>Item 3</a>
-          </li>
-        </ul>
+        <ul className="menu menu-horizontal px-1 text-lg">{NavMenu}</ul>
       </div>
       <div className="navbar-end">
-        <a className="btn">Button</a>
+        <a className="btn">Login</a>
       </div>
     </div>
   );
