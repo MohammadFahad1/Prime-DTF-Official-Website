@@ -19,7 +19,7 @@ export default function HeroSection() {
       <div className="absolute inset-0 bg-black opacity-50 z-10"></div>
 
       <div className="relative flex items-center justify-center min-h-screen text-neutral-content text-center z-20 p-4">
-        <div className="bg-transparent p-4 rounded-xl md:my-20">
+        <div className="bg-transparent p-4 rounded-xl md:my-16">
           <h3 className="md:text-xl font-bold uppercase text-white">
             Made for Creators
           </h3>
