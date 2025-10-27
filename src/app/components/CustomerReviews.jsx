@@ -1,7 +1,26 @@
+"use client";
 import Image from "next/image";
-import React from "react";
+import React, { use, useEffect } from "react";
 
 const CustomerReviews = () => {
+  const fetchReviews = async () => {
+    const placeId = "YOUR_PLACE_ID";
+    const apiKey = process.env.GOOGLE_API_KEY;
+
+    const response = await fetch(
+      `https://maps.googleapis.com/maps/api/place/details/json?place_id=${process.env.GOOGLE_PLACE_ID}&fields=name,rating,user_ratings_total,reviews&key=${process.env.GOOGLE_MAP_API_KEY}`
+    );
+
+    const data = await response.json();
+    return data.result.reviews;
+  };
+
+  useEffect(() => {
+    fetchReviews().then((reviews) => {
+      console.log(reviews);
+    });
+  }, []);
+
   return (
     <section className="min-h-screen w-full md:py-20 md:px-10 py-5 px-4">
       <h3 className="md:text-xl text-md font-semibold uppercase text-center md:text-left">
