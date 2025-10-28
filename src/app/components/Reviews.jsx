@@ -48,6 +48,7 @@ const Reviews = () => {
                 rating={review.rating}
                 review={review.text}
                 photos={review.photos}
+                key={review.time}
               />
             </SwiperSlide>
           ))}

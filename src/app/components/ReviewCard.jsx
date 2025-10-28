@@ -1,13 +1,22 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
-const ReviewCard = ({ profileImage, name, time, rating, review, photos }) => {
+const ReviewCard = ({
+  profileImage,
+  name,
+  time,
+  rating,
+  review,
+  photos,
+  key,
+}) => {
   return (
-    <article className="relative max-w-3xl w-full bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-gray-200">
+    <article className="relative max-w-3xl w-full bg-[#f5f5f5] backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-gray-200">
       <div className="absolute top-4 right-4">
         <svg
-          width="28"
-          height="28"
+          width="20"
+          height="20"
           viewBox="0 0 48 48"
           aria-hidden
           className="drop-shadow-sm"
@@ -50,22 +59,51 @@ const ReviewCard = ({ profileImage, name, time, rating, review, photos }) => {
             </div>
 
             <div className="flex items-center gap-2">
-              <div className="flex -space-x-1">{rating}</div>
-
-              <span className="inline-flex items-center justify-center ml-2 bg-blue-50 border border-blue-100 rounded-full p-1">
-                <svg
-                  className="w-4 h-4 text-blue-600"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                  aria-hidden
-                >
-                  <path
-                    fillRule="evenodd"
-                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.707a1 1 0 10-1.414-1.414L9 10.586 7.707 9.293a1 1 0 10-1.414 1.414L9 13.414l4.707-4.707z"
-                    clipRule="evenodd"
+              <div className="text-[#f8aa00] text-lg font-semibold flex gap-2 items-center">
+                <p>{rating}</p>
+                <div className="rating">
+                  <input
+                    type="radio"
+                    name={key}
+                    disabled
+                    className="mask mask-star-2 bg-[#f8aa00] -ml-1 max-h-4"
+                    aria-label="1 star"
+                    defaultChecked={Math.round(rating) === 1}
                   />
-                </svg>
-              </span>
+                  <input
+                    type="radio"
+                    name={key}
+                    disabled
+                    className="mask mask-star-2 bg-[#f8aa00] -ml-1 max-h-4"
+                    aria-label="2 star"
+                    defaultChecked={Math.round(rating) === 2}
+                  />
+                  <input
+                    type="radio"
+                    name={key}
+                    disabled
+                    className="mask mask-star-2 bg-[#f8aa00] -ml-1 max-h-4"
+                    aria-label="3 star"
+                    defaultChecked={Math.round(rating) === 3}
+                  />
+                  <input
+                    type="radio"
+                    name={key}
+                    disabled
+                    className="mask mask-star-2 bg-[#f8aa00] -ml-1 max-h-4"
+                    aria-label="4 star"
+                    defaultChecked={Math.round(rating) === 4}
+                  />
+                  <input
+                    type="radio"
+                    name={key}
+                    disabled
+                    className="mask mask-star-2 bg-[#f8aa00] -ml-1 max-h-4"
+                    aria-label="5 star"
+                    defaultChecked={Math.round(rating) === 5}
+                  />
+                </div>
+              </div>
             </div>
           </div>
 
@@ -91,12 +129,13 @@ const ReviewCard = ({ profileImage, name, time, rating, review, photos }) => {
           </div>
 
           <div className="mt-3">
-            <a
-              href="#"
+            <Link
+              href="https://maps.app.goo.gl/njWFZheoMyPMmY519"
+              target="blank"
               className="text-sm text-gray-500 hover:text-gray-700 underline"
             >
               Show more
-            </a>
+            </Link>
           </div>
         </div>
       </div>
