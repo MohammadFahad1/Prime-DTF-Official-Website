@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
 
-const ReviewCard = () => {
+const ReviewCard = ({ profileImage, name, time, rating, review, photos }) => {
   return (
     <article className="relative max-w-3xl w-full bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-gray-200">
       <div className="absolute top-4 right-4">
@@ -32,9 +32,11 @@ const ReviewCard = () => {
       </div>
 
       <div className="flex items-start gap-4">
-        <div className="flex-shrink-0">
+        <div className="shrink-0">
           <Image
-            src="https://i.pravatar.cc/100?img=12"
+            src={profileImage}
+            height={100}
+            width={300}
             alt="Reviewer avatar"
             className="w-14 h-14 rounded-full object-cover border-2 border-white shadow-sm"
           />
@@ -43,55 +45,12 @@ const ReviewCard = () => {
         <div className="flex-1">
           <div className="flex items-center justify-between">
             <div>
-              <h3 className="text-gray-800 font-semibold text-lg">
-                Joshua Matthews
-              </h3>
-              <p className="text-sm text-gray-400 mt-0.5">3 months ago</p>
+              <h3 className="text-gray-800 font-semibold text-lg">{name}</h3>
+              <p className="text-sm text-gray-400 mt-0.5">{time}</p>
             </div>
 
             <div className="flex items-center gap-2">
-              <div className="flex -space-x-1">
-                <svg
-                  className="w-5 h-5 text-yellow-400"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                  aria-hidden
-                >
-                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.967a1 1 0 00.95.69h4.19c.969 0 1.371 1.24.588 1.81l-3.392 2.462a1 1 0 00-.364 1.118l1.287 3.967c.3.921-.755 1.688-1.54 1.118L10 13.347l-3.392 2.462c-.784.57-1.838-.197-1.539-1.118l1.287-3.967a1 1 0 00-.364-1.118L2.6 9.394c-.783-.57-.38-1.81.588-1.81h4.19a1 1 0 00.95-.69l1.286-3.967z" />
-                </svg>
-                <svg
-                  className="w-5 h-5 text-yellow-400"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                  aria-hidden
-                >
-                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.967a1 1 0 00.95.69h4.19c.969 0 1.371 1.24.588 1.81l-3.392 2.462a1 1 0 00-.364 1.118l1.287 3.967c.3.921-.755 1.688-1.54 1.118L10 13.347l-3.392 2.462c-.784.57-1.838-.197-1.539-1.118l1.287-3.967a1 1 0 00-.364-1.118L2.6 9.394c-.783-.57-.38-1.81.588-1.81h4.19a1 1 0 00.95-.69l1.286-3.967z" />
-                </svg>
-                <svg
-                  className="w-5 h-5 text-yellow-400"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                  aria-hidden
-                >
-                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.967a1 1 0 00.95.69h4.19c.969 0 1.371 1.24.588 1.81l-3.392 2.462a1 1 0 00-.364 1.118l1.287 3.967c.3.921-.755 1.688-1.54 1.118L10 13.347l-3.392 2.462c-.784.57-1.838-.197-1.539-1.118l1.287-3.967a1 1 0 00-.364-1.118L2.6 9.394c-.783-.57-.38-1.81.588-1.81h4.19a1 1 0 00.95-.69l1.286-3.967z" />
-                </svg>
-                <svg
-                  className="w-5 h-5 text-yellow-400"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                  aria-hidden
-                >
-                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.967a1 1 0 00.95.69h4.19c.969 0 1.371 1.24.588 1.81l-3.392 2.462a1 1 0 00-.364 1.118l1.287 3.967c.3.921-.755 1.688-1.54 1.118L10 13.347l-3.392 2.462c-.784.57-1.838-.197-1.539-1.118l1.287-3.967a1 1 0 00-.364-1.118L2.6 9.394c-.783-.57-.38-1.81.588-1.81h4.19a1 1 0 00.95-.69l1.286-3.967z" />
-                </svg>
-                <svg
-                  className="w-5 h-5 text-yellow-400"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                  aria-hidden
-                >
-                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.967a1 1 0 00.95.69h4.19c.969 0 1.371 1.24.588 1.81l-3.392 2.462a1 1 0 00-.364 1.118l1.287 3.967c.3.921-.755 1.688-1.54 1.118L10 13.347l-3.392 2.462c-.784.57-1.838-.197-1.539-1.118l1.287-3.967a1 1 0 00-.364-1.118L2.6 9.394c-.783-.57-.38-1.81.588-1.81h4.19a1 1 0 00.95-.69l1.286-3.967z" />
-                </svg>
-              </div>
+              <div className="flex -space-x-1">{rating}</div>
 
               <span className="inline-flex items-center justify-center ml-2 bg-blue-50 border border-blue-100 rounded-full p-1">
                 <svg
@@ -101,9 +60,9 @@ const ReviewCard = () => {
                   aria-hidden
                 >
                   <path
-                    fill-rule="evenodd"
+                    fillRule="evenodd"
                     d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.707a1 1 0 10-1.414-1.414L9 10.586 7.707 9.293a1 1 0 10-1.414 1.414L9 13.414l4.707-4.707z"
-                    clip-rule="evenodd"
+                    clipRule="evenodd"
                   />
                 </svg>
               </span>
@@ -112,29 +71,21 @@ const ReviewCard = () => {
 
           <div className="mt-4 flex items-start gap-4">
             <p className="text-gray-700 text-sm leading-relaxed max-w-[70%] line-clamp-3">
-              This was my very first time ordering and I wish I could give more
-              than five (5) stars…… EVERYTHING was excellent! The ordering
-              process was simple, order shipped fast as expected and quality was
-              top notch.
+              {review}
             </p>
 
             <div className="ml-auto flex items-center">
               <div className="flex -space-x-3">
-                <Image
-                  src="https://picsum.photos/seed/1/120/120"
-                  alt="review photo 1"
-                  className="w-16 h-16 rounded-lg object-cover border-4 border-white shadow-md"
-                />
-                <Image
-                  src="https://picsum.photos/seed/2/120/120"
-                  alt="review photo 2"
-                  className="w-16 h-16 rounded-lg object-cover border-4 border-white shadow-md -ml-4"
-                />
-                <Image
-                  src="https://picsum.photos/seed/3/120/120"
-                  alt="review photo 3"
-                  className="w-16 h-16 rounded-lg object-cover border-4 border-white shadow-md -ml-4"
-                />
+                {photos.map((photo, index) => (
+                  <Image
+                    key={index}
+                    src={photo.image_url}
+                    height={100}
+                    width={300}
+                    alt={`Review photo ${index + 1}`}
+                    className="w-16 h-16 rounded-lg object-cover border-2 border-white shadow-sm"
+                  />
+                ))}
               </div>
             </div>
           </div>
