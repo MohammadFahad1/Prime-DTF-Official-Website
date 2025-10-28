@@ -1,5 +1,6 @@
 import Image from "next/image";
 import React from "react";
+import Reviews from "./Reviews";
 
 const CustomerReviews = () => {
   return (
@@ -109,6 +110,9 @@ const CustomerReviews = () => {
       </div>
 
       {/* Review Card */}
+      <div className="mt-10 mb-5 max-w-4xl rounded-2xl md:mx-auto">
+        <Reviews />
+      </div>
     </section>
   );
 };
