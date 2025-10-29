@@ -1,12 +1,31 @@
+"use client";
 import Image from "next/image";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Reviews from "./Reviews";
 
 const CustomerReviews = () => {
+  const [AllReviews, setAllReviews] = useState([]);
+  const [PlaceDetails, setPlaceDetails] = useState([]);
+
+  useEffect(() => {
+    const fetchReviews = async () => {
+      try {
+        const response = await fetch("/api/place-details");
+        const data = await response.json();
+        setPlaceDetails(data);
+        setAllReviews(data.reviews.sort((a, b) => b.time - a.time));
+      } catch (error) {
+        console.error("Error fetching reviews:", error);
+      }
+    };
+
+    fetchReviews();
+  }, []);
+
   return (
     <section className="min-h-screen w-full md:py-20 md:px-10 py-5 px-4">
       <h3 className="md:text-xl text-md font-semibold uppercase text-center md:text-left">
-        2,090+ verıfıed 5-star revıews
+        {PlaceDetails.total_reviews}+ verıfıed 5-star revıews
       </h3>
       <div className="flex flex-col md:flex-row items-center justify-center md:justify-between gap-2.5">
         <h2 className="mb-5 mt-2 text-3xl md:text-6xl font-semibold text-black tracking-tighter uppercase md:leading-none">
@@ -22,7 +41,7 @@ const CustomerReviews = () => {
 
         <div className="p-3 md:p-4 bg-[#f5f5f5] w-full md:w-auto min-w-[300px] rounded">
           <h3 className="font-semibold text-md md:text-3xl tracking-tight text-center">
-            2090+ REVIEWS <br />
+            {PlaceDetails.total_reviews}+ REVIEWS <br />
             <span
               className="text-[#19181E] relative top-0 left-1"
               style={{ zIndex: 1 }}
@@ -34,7 +53,7 @@ const CustomerReviews = () => {
               ON GOOGLE
             </span>
             <br />
-            <p className="pt-3 underline">4.9/5.0</p>
+            <p className="pt-3 underline">{PlaceDetails.rating}/5.0</p>
           </h3>
         </div>
       </div>
@@ -53,10 +72,10 @@ const CustomerReviews = () => {
         </div>
         <div>
           <p className="text-md font-semibold">
-            DTF Sheet | Custom Shirt Transfers
+            {PlaceDetails.name} | Custom Shirt Transfers
           </p>
           <div className="text-[#f8aa00] text-lg font-semibold flex gap-2 items-center">
-            <p>4.9</p>
+            <p>{PlaceDetails.rating}</p>
             <div className="rating">
               <input
                 type="radio"
@@ -97,7 +116,9 @@ const CustomerReviews = () => {
             </div>
           </div>
           <div className="flex gap-2 items-center">
-            <p className="text-sm text-gray-500 md:text-md">2077 reviews on</p>{" "}
+            <p className="text-sm text-gray-500 md:text-md">
+              {PlaceDetails.total_reviews} reviews on
+            </p>{" "}
             <Image
               src="/assets/google.png"
               alt="Google Logo"
@@ -111,7 +132,7 @@ const CustomerReviews = () => {
 
       {/* Review Card */}
       <div className="mt-5 mb-5 max-w-4xl rounded-2xl md:mx-auto">
-        <Reviews />
+        <Reviews AllReviews={AllReviews} />
       </div>
     </section>
   );
