@@ -29,9 +29,18 @@ const Reviews = () => {
   return (
     <>
       <Swiper
-        slidesPerView={2}
-        spaceBetween={30}
-        freeMode={true}
+        breakpoints={{
+          320: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+          },
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 30,
+          },
+        }}
+        spaceBetween={20}
+        freeMode={false}
         pagination={{
           clickable: false,
         }}
@@ -48,7 +57,7 @@ const Reviews = () => {
                 rating={review.rating}
                 review={review.text}
                 photos={review.photos}
-                key={review.time}
+                reviewKey={review.time}
               />
             </SwiperSlide>
           ))}

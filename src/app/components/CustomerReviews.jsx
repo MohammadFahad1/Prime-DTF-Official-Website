@@ -110,7 +110,7 @@ const CustomerReviews = () => {
       </div>
 
       {/* Review Card */}
-      <div className="mt-10 mb-5 max-w-4xl rounded-2xl md:mx-auto">
+      <div className="mt-5 mb-5 max-w-4xl rounded-2xl md:mx-auto">
         <Reviews />
       </div>
     </section>

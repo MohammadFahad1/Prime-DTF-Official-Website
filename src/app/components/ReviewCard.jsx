@@ -9,17 +9,31 @@ const ReviewCard = ({
   rating,
   review,
   photos,
-  key,
+  reviewKey,
 }) => {
   return (
-    <article className="relative max-w-3xl w-full bg-[#f5f5f5] backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-gray-200">
-      <div className="absolute top-4 right-4">
+    <article className="relative max-w-3xl w-full bg-[#f5f5f5] backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-gray-200 min-h-56">
+      <div className="flex justify-between">
+        <div className="flex items-center gap-2">
+          <Image
+            src={profileImage}
+            height={100}
+            width={300}
+            alt="Reviewer avatar"
+            className="w-10 h-10 rounded-full object-cover border-2 border-white shadow-sm"
+          />
+          <div>
+            <h3 className="text-gray-800 font-semibold text-lg">{name}</h3>
+            <p className="text-sm text-gray-400 mt-0.5">{time}</p>
+          </div>
+        </div>
+
         <svg
           width="20"
           height="20"
           viewBox="0 0 48 48"
           aria-hidden
-          className="drop-shadow-sm"
+          className="drop-shadow-sm mt-2"
         >
           <path
             fill="#4285F4"
@@ -40,104 +54,96 @@ const ReviewCard = ({
         </svg>
       </div>
 
-      <div className="flex items-start gap-4">
-        <div className="shrink-0">
-          <Image
-            src={profileImage}
-            height={100}
-            width={300}
-            alt="Reviewer avatar"
-            className="w-14 h-14 rounded-full object-cover border-2 border-white shadow-sm"
+      <div className="text-[#f8aa00] text-lg font-semibold flex gap-2 items-center mt-2.5">
+        <div className="rating">
+          <input
+            type="radio"
+            name={reviewKey}
+            disabled
+            className="mask mask-star-2 bg-[#f8aa00] -ml-1 max-h-4"
+            aria-label="1 star"
+            defaultChecked={Math.round(rating) === 1}
+          />
+          <input
+            type="radio"
+            name={reviewKey}
+            disabled
+            className="mask mask-star-2 bg-[#f8aa00] -ml-1 max-h-4"
+            aria-label="2 star"
+            defaultChecked={Math.round(rating) === 2}
+          />
+          <input
+            type="radio"
+            name={reviewKey}
+            disabled
+            className="mask mask-star-2 bg-[#f8aa00] -ml-1 max-h-4"
+            aria-label="3 star"
+            defaultChecked={Math.round(rating) === 3}
+          />
+          <input
+            type="radio"
+            name={reviewKey}
+            disabled
+            className="mask mask-star-2 bg-[#f8aa00] -ml-1 max-h-4"
+            aria-label="4 star"
+            defaultChecked={Math.round(rating) === 4}
+          />
+          <input
+            type="radio"
+            name={reviewKey}
+            disabled
+            className="mask mask-star-2 bg-[#f8aa00] -ml-1 max-h-4"
+            aria-label="5 star"
+            defaultChecked={Math.round(rating) === 5}
           />
         </div>
+        <div className="text-blue-500 -ml-1.5">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="None"
+            viewBox="0 0 24 24"
+            strokeWidth={2}
+            stroke="currentColor"
+            className="size-5"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M9 12.75 11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 0 1-1.043 3.296 3.745 3.745 0 0 1-3.296 1.043A3.745 3.745 0 0 1 12 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 0 1-3.296-1.043 3.745 3.745 0 0 1-1.043-3.296A3.745 3.745 0 0 1 3 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 0 1 1.043-3.296 3.746 3.746 0 0 1 3.296-1.043A3.746 3.746 0 0 1 12 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 0 1 3.296 1.043 3.746 3.746 0 0 1 1.043 3.296A3.745 3.745 0 0 1 21 12Z"
+            />
+          </svg>
+        </div>
+      </div>
 
-        <div className="flex-1">
-          <div className="flex items-center justify-between">
-            <div>
-              <h3 className="text-gray-800 font-semibold text-lg">{name}</h3>
-              <p className="text-sm text-gray-400 mt-0.5">{time}</p>
-            </div>
+      <div className="mt-4 flex items-start gap-4">
+        <p className="text-gray-700 text-sm leading-relaxed max-w-[70%] line-clamp-3">
+          {review.slice(0, 180)}
+        </p>
 
-            <div className="flex items-center gap-2">
-              <div className="text-[#f8aa00] text-lg font-semibold flex gap-2 items-center">
-                <p>{rating}</p>
-                <div className="rating">
-                  <input
-                    type="radio"
-                    name={key}
-                    disabled
-                    className="mask mask-star-2 bg-[#f8aa00] -ml-1 max-h-4"
-                    aria-label="1 star"
-                    defaultChecked={Math.round(rating) === 1}
-                  />
-                  <input
-                    type="radio"
-                    name={key}
-                    disabled
-                    className="mask mask-star-2 bg-[#f8aa00] -ml-1 max-h-4"
-                    aria-label="2 star"
-                    defaultChecked={Math.round(rating) === 2}
-                  />
-                  <input
-                    type="radio"
-                    name={key}
-                    disabled
-                    className="mask mask-star-2 bg-[#f8aa00] -ml-1 max-h-4"
-                    aria-label="3 star"
-                    defaultChecked={Math.round(rating) === 3}
-                  />
-                  <input
-                    type="radio"
-                    name={key}
-                    disabled
-                    className="mask mask-star-2 bg-[#f8aa00] -ml-1 max-h-4"
-                    aria-label="4 star"
-                    defaultChecked={Math.round(rating) === 4}
-                  />
-                  <input
-                    type="radio"
-                    name={key}
-                    disabled
-                    className="mask mask-star-2 bg-[#f8aa00] -ml-1 max-h-4"
-                    aria-label="5 star"
-                    defaultChecked={Math.round(rating) === 5}
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="mt-4 flex items-start gap-4">
-            <p className="text-gray-700 text-sm leading-relaxed max-w-[70%] line-clamp-3">
-              {review}
-            </p>
-
-            <div className="ml-auto flex items-center">
-              <div className="flex -space-x-3">
-                {photos.map((photo, index) => (
-                  <Image
-                    key={index}
-                    src={photo.image_url}
-                    height={100}
-                    width={300}
-                    alt={`Review photo ${index + 1}`}
-                    className="w-16 h-16 rounded-lg object-cover border-2 border-white shadow-sm"
-                  />
-                ))}
-              </div>
-            </div>
-          </div>
-
-          <div className="mt-3">
-            <Link
-              href="https://maps.app.goo.gl/njWFZheoMyPMmY519"
-              target="blank"
-              className="text-sm text-gray-500 hover:text-gray-700 underline"
-            >
-              Show more
-            </Link>
+        <div className="ml-auto flex items-center">
+          <div className="flex -space-x-3">
+            {photos?.slice(0, 2).map((photo, index) => (
+              <Image
+                key={index}
+                src={photo.image_url}
+                height={100}
+                width={300}
+                alt={`Review photo ${index + 1}`}
+                className="w-16 h-16 rounded-lg object-cover border-2 border-white shadow-sm"
+              />
+            ))}
           </div>
         </div>
+      </div>
+
+      <div className="mt-3">
+        <Link
+          href="https://maps.app.goo.gl/njWFZheoMyPMmY519"
+          target="blank"
+          className="text-sm text-gray-500 hover:text-gray-700 underline"
+        >
+          Show more
+        </Link>
       </div>
     </article>
   );
