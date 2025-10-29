@@ -24,7 +24,7 @@ export default function NavBar() {
   );
 
   return (
-    <div className="navbar bg-[#19191C] text-white font-extrabold shadow-sm max-w-7xl mx-auto px-10">
+    <div className="navbar bg-[#19191C] text-white font-extrabold shadow-sm w-full px-10">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
