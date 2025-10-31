@@ -20,7 +20,7 @@ const FeatureHighlights = () => {
         </div>
       </div>
       {/* Card Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mt-15">
+      <div className="flex md:flex-row flex-col justify-center items-center gap-5 md:gap-15 mt-8 md:mt-15">
         <div>
           <Image
             src={"/assets/dtf-print-shirt.jpg"}
@@ -30,17 +30,23 @@ const FeatureHighlights = () => {
             className="rounded"
           />
         </div>
-        <div className="flex flex-col justify-center">
-          <h3 className="uppercase text-xl tracking-tighter mb-3.5 font-semibold">
+        <div className="flex flex-col justify-center w-full md:max-w-[450px]">
+          <h3 className="uppercase text-md md:text-xl tracking-tighter mb-1 md:mb-3.5 font-semibold">
             Make Your Designs Pop
           </h3>
           <h2
-            className="uppercase text-5xl tracking-tighter mb-3 font-semibold"
-            style={{ lineHeight: 1.5 }}
+            className="uppercase text-xl md:text-5xl tracking-tighter md:mb-3 font-semibold"
+            style={{ lineHeight: 1.2 }}
           >
-            CREATE BOLD, EYE-CATCHING DESIGNS WITH DTF TRANSFERS THAT sELL
+            CREATE BOLD, EYE-CATCHING DESIGNS WITH{" "}
+            <div className="md:hidden block"></div>
+            <span className="text-white relative top-0 left-0">
+              <div className="absolute top-1 -left-0.5 md:top-3 min-h-3/4 w-[104%] md:w-[103%] bg-[#D55027] px-2 pr-4 rounded -z-10"></div>
+              DTF TRANSFERS
+            </span>{" "}
+            THAT SELL
           </h2>
-          <button className="bg-black px-5 py-3 rounded-md text-xl text-white uppercase font-semibold hover:scale-105 transition-transform cursor-pointer tracking-tighter mt-5">
+          <button className="bg-black hover:bg-[#202020] px-5 py-2 md:py-4 rounded-md text-md md:text-xl text-white uppercase font-bold hover:scale-105 transition-transform cursor-pointer tracking-tighter mt-3 md:mt-5 w-full md:max-w-[200px]">
             Try It Now
           </button>
         </div>

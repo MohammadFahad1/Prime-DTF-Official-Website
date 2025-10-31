@@ -3,7 +3,7 @@ import React from "react";
 
 const WhyChooseUs = () => {
   return (
-    <section className="min-h-screen w-full md:py-20 md:px-10 py-5 px-4 bg-[#ebebeb]">
+    <section className="min-h-screen w-full md:py-20 md:px-10 py-5 px-4 bg-[#f5f5f5]">
       {/* Cards Header */}
       <div className="flex justify-around items-center max-w-[1000px] mx-auto gap-5">
         <Image
