@@ -43,7 +43,7 @@ export default function NavBar() {
           | (B2B Only)
         </span>
       </marquee>
-      <div className="bg-black px-5 py-2 text-md text-center font-bold text-white my-0">
+      <div className="bg-black px-5 py-2 text-md text-center font-bold text-white -mt-2 my-0">
         <p className="my-0">Acid Wash Drop is Back in Stock!</p>
       </div>
       {/* Navbar */}
