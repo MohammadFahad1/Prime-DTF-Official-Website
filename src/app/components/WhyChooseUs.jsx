@@ -3,7 +3,7 @@ import React from "react";
 
 const WhyChooseUs = () => {
   return (
-    <section className="min-h-screen w-full md:py-20 md:px-10 py-5 px-4 bg-[#f5f5f5]">
+    <section className="min-h-screen w-full md:py-20 md:px-10 py-5 px-4 bg-[#171717]">
       {/* Cards Header */}
       <div className="flex justify-around items-center max-w-[1000px] mx-auto gap-5">
         <Image
@@ -13,7 +13,7 @@ const WhyChooseUs = () => {
           alt="bg image"
           className="hidden md:block"
         />
-        <div className="text-center">
+        <div className="text-center text-white">
           <h3 className="text-md md:text-xl tracking-tighter leading-8 uppercase font-semibold">
             Why 80,000+ Creators Choose DTFSheet™
           </h3>
@@ -36,7 +36,7 @@ const WhyChooseUs = () => {
       {/* Card Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 mt-15">
         {/* Card 1 Starts */}
-        <div className="card w-auto bg-[#f7f7f7] hover:bg-[#d8d5d5] transition-colors duration-300 card-xl shadow-lg rounded-md">
+        <div className="card w-auto hover:scale-105 bg-[#f7f7f7] hover:bg-[#d8d5d5] transition-all cursor-pointer duration-300 card-xl shadow-lg rounded-md">
           <div className="card-body p-5">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -63,7 +63,7 @@ const WhyChooseUs = () => {
         </div>
         {/* Card 1 Ends */}
         {/* Card 2 Starts */}
-        <div className="card w-auto bg-[#f7f7f7] hover:bg-[#d8d5d5] transition-colors duration-300 card-xl shadow-lg rounded-md">
+        <div className="card w-auto hover:scale-105 bg-[#f7f7f7] hover:bg-[#d8d5d5] transition-all cursor-pointer duration-300 card-xl shadow-lg rounded-md">
           <div className="card-body p-5">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -90,7 +90,7 @@ const WhyChooseUs = () => {
         </div>
         {/* Card 2 Ends */}
         {/* Card 3 Starts */}
-        <div className="card w-auto bg-[#f7f7f7] hover:bg-[#d8d5d5] transition-colors duration-300 card-xl shadow-lg rounded-md">
+        <div className="card w-auto hover:scale-105 bg-[#f7f7f7] hover:bg-[#d8d5d5] transition-all cursor-pointer duration-300 card-xl shadow-lg rounded-md">
           <div className="card-body p-5">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -117,7 +117,7 @@ const WhyChooseUs = () => {
         </div>
         {/* Card 3 Ends */}
         {/* Card 4 Starts */}
-        <div className="card w-auto bg-[#f7f7f7] hover:bg-[#d8d5d5] transition-colors duration-300 card-xl shadow-lg rounded-md">
+        <div className="card w-auto hover:scale-105 bg-[#f7f7f7] hover:bg-[#d8d5d5] transition-all cursor-pointer duration-300 card-xl shadow-lg rounded-md">
           <div className="card-body p-5">
             <svg
               xmlns="http://www.w3.org/2000/svg"
