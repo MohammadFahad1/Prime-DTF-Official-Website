@@ -3,7 +3,7 @@ import React from "react";
 
 const WhyChooseUs = () => {
   return (
-    <section className="min-h-screen w-full md:py-20 md:px-10 py-5 px-4">
+    <section className="min-h-screen w-full md:py-20 md:px-10 py-5 px-4 bg-[#ebebeb]">
       {/* Cards Header */}
       <div className="flex justify-around items-center max-w-[1000px] mx-auto gap-5">
         <Image
@@ -14,12 +14,12 @@ const WhyChooseUs = () => {
           className="hidden md:block"
         />
         <div className="text-center">
-          <h3 className="text-md uppercase font-semibold">
+          <h3 className="text-md md:text-xl tracking-tighter leading-8 uppercase font-semibold">
             Why 80,000+ Creators Choose DTFSheet™
           </h3>
           <h2 className="font-bold text-3xl md:text-6xl uppercase">
-            <span className="text-white relative top-0 left-0">
-              <div className="absolute top-2 -left-1 md:top-3 min-h-3/4 w-[110%] bg-[#D55027] px-2 pr-4 rounded -z-10"></div>
+            <span className="text-white relative top-0 left-0 z-10">
+              <div className="absolute top-2 -left-1 md:top-3 min-h-3/4 w-[107%] bg-[#D55027] px-2 pr-4 rounded -z-10"></div>
               why
             </span>{" "}
             choose us?

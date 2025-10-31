@@ -23,7 +23,7 @@ const CustomerReviews = () => {
   }, []);
 
   return (
-    <section className="w-full md:pt-20 md:pb-0 md:px-10 py-5 px-4">
+    <section className="w-full md:pt-20 md:pb-10 md:px-10 py-5 px-4">
       <h3 className="md:text-xl text-md font-semibold uppercase text-center md:text-left">
         {PlaceDetails.total_reviews}+ verıfıed 5-star revıews
       </h3>
