@@ -28,7 +28,7 @@ export default function NavBar() {
       {/* Top Header */}
       <marquee
         loop={true}
-        className="bg-[#bf2340] px-5 py-2 text-xl font-bold text-white m-0"
+        className="bg-[#bf2340] px-5 py-1 md:py-2 text-md md:text-xl font-bold text-white m-0"
       >
         <span className="mr-8 my-0">
           Working Hours: 10:30 AM to 8:30 PM | Working Days: Saturday - Thursday
@@ -43,7 +43,7 @@ export default function NavBar() {
           | (B2B Only)
         </span>
       </marquee>
-      <div className="bg-black px-5 py-2 text-md text-center font-bold text-white -mt-2 my-0">
+      <div className="bg-black px-5 py-1 text-sm md:py-2 md:text-md text-center font-bold text-white -mt-2 my-0">
         <p className="my-0">Acid Wash Drop is Back in Stock!</p>
       </div>
       {/* Navbar */}
