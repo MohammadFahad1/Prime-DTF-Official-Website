@@ -47,9 +47,9 @@ export default function NavBar() {
         <p className="my-0">Acid Wash Drop is Back in Stock!</p>
       </div>
       {/* Navbar */}
-      <nav className="navbar bg-white text-[#19191C] font-extrabold shadow-sm w-full px-10">
+      <nav className="navbar bg-white text-[#19191C] font-extrabold shadow-sm w-full px-10 md:justify-between">
         <div className="navbar-start">
-          <div className="dropdown">
+          <div className="dropdown z-50">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -69,22 +69,32 @@ export default function NavBar() {
             </div>
             <ul
               tabIndex="-1"
-              className="menu menu-sm dropdown-content bg-[#19191C] rounded-box z-1 mt-3 w-52 p-2 shadow"
+              className="menu menu-sm dropdown-content bg-white rounded-box z-1 mt-3 w-52 p-2 shadow"
             >
               {NavMenu}
             </ul>
           </div>
-          <Link href={"/"}>
+          <Link href={"/"} className="sm:block hidden">
             <Image
               src={"/assets/logo.png"}
               width={100}
               height={80}
               alt="logo"
+              className="md:mx-auto"
             />
           </Link>
         </div>
+        <Link href={"/"} className="block sm:hidden">
+          <Image
+            src={"/assets/logo.png"}
+            width={100}
+            height={80}
+            alt="logo"
+            className="md:mx-auto"
+          />
+        </Link>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1 text-lg">{NavMenu}</ul>
+          <ul className="menu menu-horizontal px-1 text-lg z-20">{NavMenu}</ul>
         </div>
         <div className="navbar-end">
           <a className="btn">Login</a>
