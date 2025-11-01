@@ -12,9 +12,12 @@ const Footer = () => {
             height={50}
             width={50}
             alt="Logo of Prime DTF"
+            className="-mb-4"
           />
           <p>
-            Prime DTF (Custom DTF Transfers)
+            <strong className="text-xl">
+              Prime DTF (Custom DTF Transfers)
+            </strong>
             <br />
             <b>Address: </b> Plot 1, Rupnagor Abashik Mor, 27/ka Rupnagar,
             <br />
@@ -35,7 +38,9 @@ const Footer = () => {
         <nav>
           <h6 className="footer-title">Company</h6>
           <a className="link link-hover">About us</a>
-          <a className="link link-hover">Contact</a>
+          <Link href={"/contact-us"} className="link link-hover">
+            Contact
+          </Link>
           <a className="link link-hover">Jobs</a>
           <a className="link link-hover">Press kit</a>
         </nav>

@@ -61,12 +61,12 @@ const ContactUsPage = () => {
       </div>
 
       {/* Main Content Area: Contact Details and Form */}
-      <div className="container mx-auto px-4 py-16 lg:py-24 bg-white">
+      <div className="container mx-auto px-4 py-16 lg:py-16 bg-white">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
           {/* Left Column: Contact Details & Map (2/3rds width on desktop) */}
           <div className="lg:col-span-1 space-y-12">
             {/* Contact Information Cards */}
-            <div className="bg-[#eaeaea] p-8 rounded-xl shadow-2xl space-y-6">
+            <div className="bg-[#eaeaea] p-8 rounded-xl shadow-xl space-y-6">
               <h2 className="text-3xl font-bold border-b pb-3 border-gray-700 mb-6">
                 Contact Info
               </h2>
@@ -131,7 +131,7 @@ const ContactUsPage = () => {
 
           {/* Right Column: Contact Form (2/3rds width on desktop) */}
           <div className="lg:col-span-2 h-full">
-            <div className="bg-gray-800 p-8 md:p-10 rounded-xl shadow-2xl">
+            <div className="bg-[#eaeaea] p-8 md:p-10 rounded-xl shadow-xl">
               <h2 className="text-3xl font-bold mb-6 border-b pb-3 border-gray-700">
                 Send Us a Message
               </h2>
@@ -140,7 +140,7 @@ const ContactUsPage = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <label className="form-control w-full">
                     <div className="label">
-                      <span className="label-text text-gray-300">
+                      <span className="label-text text-gray-900 font-bold">
                         Your Name
                       </span>
                     </div>
@@ -148,13 +148,13 @@ const ContactUsPage = () => {
                       type="text"
                       name="name"
                       placeholder="John Doe"
-                      className="input input-bordered rounded mt-1 w-full bg-gray-700 border-gray-600 text-white focus:border-orange-500"
+                      className="input input-bordered rounded mt-1 w-full bg-white border-2 border-gray-400 text-gray-900 focus:border-orange-500"
                       required
                     />
                   </label>
                   <label className="form-control w-full">
                     <div className="label">
-                      <span className="label-text text-gray-300">
+                      <span className="label-text text-gray-900 font-bold">
                         Your Email
                       </span>
                     </div>
@@ -162,7 +162,7 @@ const ContactUsPage = () => {
                       type="email"
                       name="email"
                       placeholder="email@example.com"
-                      className="input input-bordered rounded mt-1 w-full bg-gray-700 border-gray-600 text-white focus:border-orange-500"
+                      className="input input-bordered rounded mt-1 w-full bg-white border-2 border-gray-400 text-gray-900 focus:border-orange-500"
                       required
                     />
                   </label>
@@ -171,13 +171,15 @@ const ContactUsPage = () => {
                 {/* Subject Field */}
                 <label className="form-control w-full">
                   <div className="label">
-                    <span className="label-text text-gray-300">Subject</span>
+                    <span className="label-text text-gray-900 font-bold">
+                      Subject
+                    </span>
                   </div>
                   <input
                     type="text"
                     name="subject"
                     placeholder="Inquiry about custom transfers"
-                    className="input input-bordered rounded mt-1 w-full bg-gray-700 border-gray-600 text-white focus:border-orange-500"
+                    className="input input-bordered rounded mt-1 w-full bg-white border-2 border-gray-400 text-gray-900 focus:border-orange-500"
                     required
                   />
                 </label>
@@ -185,14 +187,14 @@ const ContactUsPage = () => {
                 {/* Message Field */}
                 <label className="form-control block my-5">
                   <div className="label">
-                    <span className="label-text text-gray-300">
+                    <span className="label-text text-gray-900 font-bold">
                       Your Message
                     </span>
                   </div>
                   <textarea
                     name="message"
                     placeholder="Tell us about your project..."
-                    className="textarea textarea-bordered h-36 mt-1 rounded w-full bg-gray-700 border-gray-600 text-white focus:border-orange-500"
+                    className="textarea textarea-bordered h-36 md:h-72 mt-1 rounded w-full bg-white border-2 border-gray-400 text-gray-900 focus:border-orange-500"
                     required
                   ></textarea>
                 </label>
@@ -212,9 +214,9 @@ const ContactUsPage = () => {
       </div>
 
       {/* Google Map Section */}
-      <div className="bg-gray-800 py-16">
+      <div className="bg-[#eaeaea] py-16 shadow">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center mb-8 text-white">
+          <h2 className="text-4xl font-bold text-center mb-8 text-gray-900">
             Find Our Location
           </h2>
           <div className="w-full h-80 rounded-xl overflow-hidden shadow-2xl border-4 border-gray-700">
