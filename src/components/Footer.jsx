@@ -14,9 +14,15 @@ const Footer = () => {
             alt="Logo of Prime DTF"
           />
           <p>
-            Prime DTF
+            Prime DTF (Custom DTF Transfers)
             <br />
-            Custom DTF Transfers
+            <b>Address: </b> Plot 1, Rupnagor Abashik Mor, 27/ka Rupnagar,
+            <br />
+            Dhaka-1216 (Located west of Mirpur 11 Metro Rail Station)
+            <br />
+            <b>WhatsApp: </b>+8801805123116
+            <br />
+            <b>Email: </b>primedtf71@gmail.com
           </p>
         </aside>
         <nav>
