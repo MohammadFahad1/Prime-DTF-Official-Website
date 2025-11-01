@@ -3,7 +3,7 @@ import React from "react";
 
 const WhyChooseUs = () => {
   return (
-    <section className="min-h-screen w-full md:py-20 md:px-10 py-5 px-4 bg-[#171717]">
+    <section className="w-full md:py-20 md:px-10 py-5 px-4 bg-[#171717]">
       {/* Cards Header */}
       <div className="flex justify-around items-center max-w-[1000px] mx-auto gap-5">
         <Image
@@ -34,7 +34,7 @@ const WhyChooseUs = () => {
         />
       </div>
       {/* Card Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 mt-15">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 mt-8 md:mt-15">
         {/* Card 1 Starts */}
         <div className="card w-auto hover:scale-105 bg-[#f7f7f7] hover:bg-[#d8d5d5] transition-all cursor-pointer duration-300 card-xl shadow-lg rounded-md">
           <div className="card-body p-5">
