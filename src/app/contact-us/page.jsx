@@ -49,11 +49,12 @@ const ContactUsPage = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-[#fb9474] text-[#bf2340] font-sans antialiased">
-      <div className="py-20 text-center border-b border-gray-800">
+    <div className="min-h-screen text-[#bf2340] font-sans antialiased">
+      <div className="py-20 text-center bg-[#fb9474] border-b border-gray-800">
         <h1 className="text-5xl md:text-6xl font-extrabold tracking-tight text-white">
           <span className="text-black">GET IN</span> TOUCH
         </h1>
+        Connect With Us
         <p className="mt-4 text-xl text-gray-800 max-w-xl mx-auto">
           We&apos;re here to help you with your custom DTF transfer needs. Reach
           out to our team!
@@ -108,7 +109,7 @@ const ContactUsPage = () => {
 
               {/* Social Media Links */}
               <div className="pt-0 pb-3 border-t border-gray-700">
-                <h3 className="text-xl font-semibold mb-4 text-gray-200">
+                <h3 className="text-xl font-bold text-center my-4 text-gray-900">
                   Connect With Us
                 </h3>
                 <div className="flex items-center justify-center gap-7">
