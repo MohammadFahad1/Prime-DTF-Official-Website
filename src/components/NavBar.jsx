@@ -72,7 +72,10 @@ export default function NavBar() {
         <p className="my-0">Acid Wash Drop is Back in Stock!</p>
       </div>
       {/* Navbar */}
-      <nav className="navbar bg-white text-[#19191C] font-extrabold shadow-sm w-full px-10 md:justify-between">
+      <nav
+        className="navbar bg-white text-[#19191C] font-extrabold shadow-sm w-full px-10 md:justify-between"
+        id="myHeader"
+      >
         <div className="navbar-start">
           <div className="dropdown z-50">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
