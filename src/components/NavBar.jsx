@@ -6,19 +6,44 @@ export default function NavBar() {
   const NavMenu = (
     <>
       <li>
-        <Link href={"/dtf-custom-trasfer"}>DTF Custom Transfer</Link>
+        <Link
+          className="px-3 py-2 hover:bg-[#bf2340] hover:text-white transition-colors rounded duration-300"
+          href={"/customdtf"}
+        >
+          DTF Custom Transfer
+        </Link>
       </li>
       <li>
-        <Link href={"/uv-dtf"}>UV DTF</Link>
+        <Link
+          className="px-3 py-2 hover:bg-[#bf2340] hover:text-white transition-colors rounded duration-300"
+          href={"/uv-dtf"}
+        >
+          UV DTF
+        </Link>
       </li>
       <li>
-        <Link href={"/blanks"}>Blanks</Link>
+        <Link
+          className="px-3 py-2 hover:bg-[#bf2340] hover:text-white transition-colors rounded duration-300"
+          href={"/blanks"}
+        >
+          Blanks
+        </Link>
       </li>
       <li>
-        <Link href={"/faq"}>FAQ</Link>
+        <Link
+          className="px-3 py-2 hover:bg-[#bf2340] hover:text-white transition-colors rounded duration-300"
+          href={"/faq"}
+        >
+          FAQ
+        </Link>
       </li>
       <li>
-        <Link href={"/contact-us"}>Contact Us</Link>
+        <Link
+          className="px-3 py-2 hover:bg-[#bf2340] hover:text-white transition-colors rounded duration-300"
+          href={"/contact-us"}
+        >
+          Contact Us
+        </Link>
       </li>
     </>
   );

@@ -1,19 +1,12 @@
+import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
 
 const Footer = () => {
   return (
     <>
       <div className="footer sm:footer-horizontal bg-base-200 text-base-content p-10">
         <aside>
-          <Image
-            src={"/assets/logo.png"}
-            height={50}
-            width={50}
-            alt="Logo of Prime DTF"
-            className="-mb-4"
-          />
           <p>
             <strong className="text-xl">
               Prime DTF (Custom DTF Transfers)
@@ -60,7 +53,11 @@ const Footer = () => {
             alt="Logo of Prime DTF"
           />
           <p className="text-white">
-            Copyright © {new Date().getFullYear()} - All right reserved
+            Copyright © {new Date().getFullYear()} - All right reserved |
+            Developed by{" "}
+            <a href="https://fahadbd.com" target="_blank" className="underline">
+              Md. Fahad Monshi
+            </a>
           </p>
         </aside>
         <nav className="grid-flow-col gap-4 md:place-self-center md:justify-self-end text-white">
