@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
 
-const ImagePreview = ({ image, alt }) => {
+const ImagePreview = ({ image }) => {
   return (
     <div>
       <Image
@@ -9,7 +9,7 @@ const ImagePreview = ({ image, alt }) => {
         height={600}
         width={400}
         className="rounded w-full h-auto"
-        alt={alt}
+        alt="DTF Sheet Image Preview"
       />
     </div>
   );
