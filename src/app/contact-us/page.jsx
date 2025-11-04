@@ -54,7 +54,6 @@ const ContactUsPage = () => {
         <h1 className="text-5xl md:text-6xl font-extrabold tracking-tight text-white">
           <span className="text-black">GET IN</span> TOUCH
         </h1>
-        Connect With Us
         <p className="mt-4 text-xl text-gray-800 max-w-xl mx-auto">
           We&apos;re here to help you with your custom DTF transfer needs. Reach
           out to our team!
