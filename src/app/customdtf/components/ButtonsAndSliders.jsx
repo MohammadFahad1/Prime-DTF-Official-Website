@@ -10,28 +10,57 @@ const ButtonsAndSliders = () => {
   const dtfSheets = [
     {
       id: 1,
-      name: '2" X 2"',
+      name: 'A5 (5" X 7")',
       images: [
         "/assets/dtfsheets/dtfsheet2.png",
         "/assets/dtfsheets/dtfsheet1.png",
         "/assets/dtfsheets/dtfsheet3.jpeg",
       ],
-      unitPrice: 1.0,
+      unitPrice: 25.0,
     },
     {
       id: 2,
-      name: '3" X 3"',
+      name: 'A4 (7.5" X 11")',
 
       images: [
         "/assets/dtfsheets/dtfsheet1.png",
         "/assets/dtfsheets/dtfsheet2.png",
         "/assets/dtfsheets/dtfsheet3.jpeg",
       ],
-      unitPrice: 3.0,
+      unitPrice: 45.0,
     },
     {
       id: 3,
-      name: '4" X 4"',
+      name: 'A3 (11" X 16")',
+      images: [
+        "/assets/dtfsheets/A3 size dtfsheet.jpg",
+        "/assets/dtfsheets/A3-DTF-.jpg",
+      ],
+      unitPrice: 80.0,
+    },
+    {
+      id: 4,
+      name: 'A2 (16" X 24")',
+      images: [
+        "/assets/dtfsheets/dtfsheet3.jpeg",
+        "/assets/dtfsheets/dtfsheet1.png",
+        "/assets/dtfsheets/dtfsheet2.png",
+      ],
+      unitPrice: 160.0,
+    },
+    {
+      id: 5,
+      name: 'Label (2.5" X 2.5")',
+      images: [
+        "/assets/dtfsheets/dtfsheet3.jpeg",
+        "/assets/dtfsheets/dtfsheet1.png",
+        "/assets/dtfsheets/dtfsheet2.png",
+      ],
+      unitPrice: 5.0,
+    },
+    {
+      id: 6,
+      name: 'Logo (3" X 3")',
       images: [
         "/assets/dtfsheets/dtfsheet3.jpeg",
         "/assets/dtfsheets/dtfsheet1.png",
@@ -87,7 +116,7 @@ const ButtonsAndSliders = () => {
                     className="rounded w-10 h-auto"
                     alt="Helo"
                   />
-                  <b>2&quot; X 2&quot;</b>
+                  <b>{sheet.name}</b>
                 </button>
               );
             })}
@@ -97,7 +126,11 @@ const ButtonsAndSliders = () => {
             design placement and quality.
           </p>
           <h2 className="text-xl md:text-2xl font-bold text-center mt-4">
-            Unit Cost: ${CurrentSheet?.unitPrice}
+            Unit Cost:{" "}
+            <span style={{ fontFamily: "sutonnyOMJ" }} className="text-4xl">
+              ৳
+            </span>
+            {CurrentSheet?.unitPrice}
           </h2>
           <h3 className="text-center mt-4 text-base md:text-lg">
             Send Your Pre-Made Gang Sheet through email to&nbsp;

@@ -22,12 +22,44 @@ export default function NavBar() {
         </Link>
       </li>
       <li>
-        <Link
-          className="px-3 py-2 hover:bg-[#bf2340] hover:text-white transition-colors rounded duration-300"
-          href={"/blanks"}
-        >
-          Blanks
-        </Link>
+        <div className="dropdown dropdown-hover p-0 hover:bg-[#bf2340] hover:text-white">
+          <div
+            tabIndex={0}
+            role="button"
+            className="px-3 py-2  transition-colors rounded duration-300"
+          >
+            Blanks
+          </div>
+          <ul
+            tabIndex="-1"
+            className="dropdown-content menu bg-white rounded-box z-50 w-52 p-2 shadow-sm ml-10 mt-0 sm:m-0"
+          >
+            <li>
+              <Link
+                className="px-3 py-3 text-black bg-white shadow hover:bg-[#bf2340] hover:text-white transition-colors rounded duration-300"
+                href={"/blanks/tshirts"}
+              >
+                Blank T-Shirts
+              </Link>
+            </li>
+            <li>
+              <Link
+                className="px-3 py-3 text-black bg-white shadow hover:bg-[#bf2340] hover:text-white transition-colors rounded duration-300"
+                href={"/blanks"}
+              >
+                Blank Sweatshirts
+              </Link>
+            </li>
+            <li>
+              <Link
+                className="px-3 py-3 text-black bg-white shadow hover:bg-[#bf2340] hover:text-white transition-colors rounded duration-300"
+                href={"/blanks"}
+              >
+                Blank Hoodies
+              </Link>
+            </li>
+          </ul>
+        </div>
       </li>
       <li>
         <Link
