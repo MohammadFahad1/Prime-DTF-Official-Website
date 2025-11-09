@@ -12,9 +12,8 @@ const ButtonsAndSliders = () => {
       id: 1,
       name: 'A5 (5" X 7")',
       images: [
-        "/assets/dtfsheets/dtfsheet2.png",
-        "/assets/dtfsheets/dtfsheet1.png",
-        "/assets/dtfsheets/dtfsheet3.jpeg",
+        "/assets/dtfsheets/a5-dtf1.jpg",
+        "/assets/dtfsheets/a5-dtf2.jpg",
       ],
       unitPrice: 25.0,
     },
@@ -23,9 +22,8 @@ const ButtonsAndSliders = () => {
       name: 'A4 (7.5" X 11")',
 
       images: [
-        "/assets/dtfsheets/dtfsheet1.png",
-        "/assets/dtfsheets/dtfsheet2.png",
-        "/assets/dtfsheets/dtfsheet3.jpeg",
+        "/assets/dtfsheets/a4-dtf1.jpg",
+        "/assets/dtfsheets/a4-dtf2.jpg",
       ],
       unitPrice: 45.0,
     },
@@ -41,32 +39,29 @@ const ButtonsAndSliders = () => {
     {
       id: 4,
       name: 'A2 (16" X 24")',
-      images: [
-        "/assets/dtfsheets/dtfsheet3.jpeg",
-        "/assets/dtfsheets/dtfsheet1.png",
-        "/assets/dtfsheets/dtfsheet2.png",
-      ],
+      images: ["/assets/dtfsheets/a2-dtf1.jpg"],
       unitPrice: 160.0,
     },
     {
       id: 5,
       name: 'Label (2.5" X 2.5")',
       images: [
-        "/assets/dtfsheets/dtfsheet3.jpeg",
-        "/assets/dtfsheets/dtfsheet1.png",
-        "/assets/dtfsheets/dtfsheet2.png",
+        "/assets/dtfsheets/level-dtf2.jpg",
+        "/assets/dtfsheets/level-dtf1.jpg",
       ],
       unitPrice: 5.0,
     },
     {
       id: 6,
       name: 'Logo (3" X 3")',
-      images: [
-        "/assets/dtfsheets/dtfsheet3.jpeg",
-        "/assets/dtfsheets/dtfsheet1.png",
-        "/assets/dtfsheets/dtfsheet2.png",
-      ],
+      images: ["/assets/dtfsheets/logosize-dtf1.jpg"],
       unitPrice: 7.0,
+    },
+    {
+      id: 7,
+      name: 'Gang sheet (23" X 39") 1 meter',
+      images: ["/assets/dtfsheets/gangsheet-dtf1.jpg"],
+      unitPrice: 320.0,
     },
   ];
 
@@ -113,7 +108,7 @@ const ButtonsAndSliders = () => {
                     src={sheet.images[0]}
                     height={40}
                     width={40}
-                    className="rounded w-10 h-auto"
+                    className="rounded w-10 h-10"
                     alt="Helo"
                   />
                   <b>{sheet.name}</b>
