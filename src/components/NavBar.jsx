@@ -53,7 +53,7 @@ export default function NavBar() {
             <li>
               <Link
                 className="px-3 py-3 text-black bg-white shadow hover:bg-[#bf2340] hover:text-white transition-colors rounded duration-300"
-                href={"/blanks"}
+                href={"/blanks/hoodies"}
               >
                 Blank Hoodies
               </Link>
