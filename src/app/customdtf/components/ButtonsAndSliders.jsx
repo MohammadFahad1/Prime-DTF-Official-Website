@@ -61,7 +61,7 @@ const ButtonsAndSliders = () => {
       id: 7,
       name: 'Gang sheet (23" X 39") 1 meter',
       images: ["/assets/dtfsheets/gangsheet-dtf1.jpg"],
-      unitPrice: 320.0,
+      unitPrice: 390.0,
     },
   ];
 

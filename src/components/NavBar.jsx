@@ -157,7 +157,9 @@ export default function NavBar() {
           <ul className="menu menu-horizontal px-1 text-lg z-20">{NavMenu}</ul>
         </div>
         <div className="navbar-end">
-          <a className="btn">Login</a>
+          <a className="btn btn-neutral border-[#d55027] rounded text-[#d55027] font-bold sm:w-auto px-5 py-3 shadow-lg hover:bg-[#d55027] hover:text-white transition duration-150">
+            Login
+          </a>
         </div>
       </nav>
     </>
