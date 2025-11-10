@@ -105,7 +105,7 @@ export default function NavBar() {
       </div>
       {/* Navbar */}
       <nav
-        className="navbar bg-white text-[#19191C] font-extrabold shadow-sm w-full px-10 md:justify-between"
+        className="navbar bg-white text-[#19191C] font-extrabold shadow-sm w-full px-10 md:justify-between z-50"
         id="myHeader"
       >
         <div className="navbar-start">
